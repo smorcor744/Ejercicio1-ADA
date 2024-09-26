@@ -36,7 +36,7 @@ fun escribirEstadisticas(path: Path, estadisticas: Map<String, Map<String, Doubl
     bw.use { writer ->
         writer.write("Columna,Mínimo,Máximo,Media\n")
         estadisticas.forEach { (columna, valores) ->
-            writer.write("${columna},${valores["Mínimo"]},${valores["Máximo"]},${valores["Media"]}\n")
+            writer.write("${columna};${valores["Mínimo"]};${valores["Máximo"]};${valores["Media"]}\n")
         }
     }
 }
